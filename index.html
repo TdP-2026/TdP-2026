@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecniche di Programmazione (ing. Gestionale L8, codice 03FYZ) 2024-2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"-->
+<!--          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="-->
+<!--          crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="css/fonts/fontawesome-free-6.7.2-web/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_package/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon_package/safari-pinned-tab.svg" color="#2980b9">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#2980B9">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content=""> <meta property="og:type" content="website">
+    <meta property="og:image" content="images/social_package/og-image.jpg">
+    <meta property="og:image:width" content="279">
+    <meta property="og:image:height" content="279">
+    <meta property="og:title" content="Tecniche di Programmazione - 2024-2025">
+    <meta property="og:url" content="https://antoalli.github.io/focus-eccv24w/"> <meta property="og:description" content="our description: TODO"> <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    ul,
+    ol {
+        list-style-type: disc;
+        padding-left: 60px;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    .table-image {
+        max-width: 50px;
+        height: auto;
+        display: inline-block;
+        margin: 0 5px;
+    }
+</style>
+</head>
+
+<body>
+<div id="header" class="container header-container">
+    <div id="header-content"></div>
+</div>
+
+<div id="main" class="container page-container">
+    <div id="intro-content"></div>
+    <div id="esami-content"></div>
+    <div id="material-content"></div>
+    <div id="teachers-content"></div>
+    <div id="program-content"></div>
+    <div id="calendar-content"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/particles-handler.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#header-content").load("sections/header.html");
+        $("#intro-content").load("sections/intro.html");
+        $("#esami-content").load("sections/esami.html");
+        $("#material-content").load("sections/material.html");
+        $("#teachers-content").load("sections/teachers.html");
+        $("#program-content").load("sections/program.html");
+        $("#calendar-content").load("sections/calendar.html");
+    });
+
+    const loadParticles = () => {
+        $('.particles-js-container').attr('id', 'particles-js');
+        particlesJS.load('particles-js', 'js/particlesjs-config.json', function () {
+            console.log('Particles loaded');
+            $(document.getElementById("particles-js")).animate({ opacity: 1 }, 2000);
+        });
+    };
+    loadParticles();
+</script>
+</body>
+
+</html>
